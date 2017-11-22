@@ -8,16 +8,15 @@ import api from "./Utils/api.js"
 import Form from "./Components/Form";
 
 const App = () => {
-  console.log(`in app`)
   return (
-    <Router>
-      <div>
-        <Search />
-
-        {/*<button
-          onClick={() => api.searchArticles({topic:"google", start:"20171117", end: "20171120"}).then((results) => console.log(results.data.response.docs[0].web_url))}>Search</button*/}      
-      </div>
-    </Router>
+    <div className="container">
+      
+      <Router>
+        <div>
+          <Search />
+        </div>
+      </Router>
+    </div>
   )
 }
 
