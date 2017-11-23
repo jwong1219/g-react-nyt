@@ -15,6 +15,14 @@ export default {
     const end = `&end_date=${query.end}`;
     console.log(`${BASEURL}${topic}${start}${end}${APIKEY}`);
     return axios.get(`${BASEURL}${topic}${start}${end}${APIKEY}`);
+  },
+
+  getSaved: () => {
+    return axios.get("/api/articles");
+  },
+
+  remArticle: (id) => {
+    return axios.delete(`/api/articles/${id}`);
   }
 
 }
